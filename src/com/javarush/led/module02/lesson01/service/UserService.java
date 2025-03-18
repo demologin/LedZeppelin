@@ -16,7 +16,6 @@ public class UserService {
     public boolean saveUser(User user) {
         if (validate(user)) {
             repo.save(user);
-            repo.toString();
             return true;
         } else {
             throw new InputMismatchException("incorrect data in " + user);
